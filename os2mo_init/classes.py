@@ -69,7 +69,7 @@ async def ensure_classes(
             if (
                 existing.name != class_data.title
                 or existing.scope != class_data.scope
-                or existing_it_system_uuid != class_data.it_system
+                or existing_it_system_uuid != it_system_uuid
             ):
                 logger.info("Updating class", data=class_data)
                 await client.update_class_mutation(
